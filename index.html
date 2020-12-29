@@ -32,6 +32,7 @@
         <h1 class="title">Simpson API</h1>
 
         <div class="content" id="simpson-quote"></div>
+        <button id="new-quote"> New Quotes</button>
     </div>
 </section>
 
@@ -63,7 +64,9 @@ function fetchQuoteJSON() {
             document.querySelector('#simpson-quote').innerHTML = simpsonQuote;
         });
 }
-
+    document.getElementById("new-quote").addEventListener("click", function() {
+        fetchQuoteJSON();
+    })
 fetchQuoteJSON();
 </script>
 </body>
